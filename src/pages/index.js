@@ -1,176 +1,60 @@
 import * as React from "react"
+import Navbar from "../components/Navbar"
+import styled from "styled-components"
+import Coverpage from "../components/Coverpage"
+import Badge from "../components/Badge"
+import Mobile from "../components/Mobile"
+import Profit from "../components/Profit"
+import Hybrid from "../components/Hybrid"
+import Logo from "../components/logo"
+import Last from '../components/Last'
+import Lastblack from "../components/Lastblack"
+import {DIV} from '../styles'
+import End from '../components/End'
 
-const pageStyles = {
-  color: "#232129",
-  padding: 96,
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
-const headingAccentStyles = {
-  color: "#663399",
-}
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
-const listStyles = {
-  marginBottom: 96,
-  paddingLeft: 0,
-}
-const listItemStyles = {
-  fontWeight: 300,
-  fontSize: 24,
-  maxWidth: 560,
-  marginBottom: 30,
-}
-
-const linkStyle = {
-  color: "#8954A8",
-  fontWeight: "bold",
-  fontSize: 16,
-  verticalAlign: "5%",
-}
-
-const docLinkStyle = {
-  ...linkStyle,
-  listStyleType: "none",
-  marginBottom: 24,
-}
-
-const descriptionStyle = {
-  color: "#232129",
-  fontSize: 14,
-  marginTop: 10,
-  marginBottom: 0,
-  lineHeight: 1.25,
-}
-
-const docLink = {
-  text: "Documentation",
-  url: "https://www.gatsbyjs.com/docs/",
-  color: "#8954A8",
+const MAIN = styled.main`
+  background-color:black;
+  color:white;
+  text-align:center;
+  font-family :verdana;
+`
+const IndexPage = () =>{
+  return <MAIN>
+    <Navbar/>
+    <Coverpage content={["It's time to trade, the future","Trade BTC,ETH Futures With 125x Leverage And Earn Rewards"]} src="https://img.freepik.com/premium-photo/mobile-app-layout-design-stock-portfolio-manager-professional-sophisticated-layou-concepts_655090-797641.jpg?size=626&ext=jpg&ga=GA1.1.1569570689.1700404536&semt=ais" showImage={true} textSize="6em" changecolor={false}/>
+    <Badge content={["00%","Conversion Fee","500 Mn+","Lifetime Volume Traded","250+","Total Tradable Pairs","15,000+","Traders"]}/>
+    <Mobile text="One App. Endless Possibilities" src="https://cdn-icons-png.flaticon.com/128/10061/10061308.png?ga=GA1.1.1569570689.1700404536&semt=ais"/>
+    <Mobile text="Future of Derivative Trading." src="https://cdn-icons-png.flaticon.com/128/1104/1104950.png?ga=GA1.1.1569570689.1700404536&semt=ais"/>
+    <Mobile text="Is now here, for you." src="https://cdn-icons-png.flaticon.com/128/4773/4773926.png?ga=GA1.1.1569570689.1700404536&semt=ais"/>
+    <Coverpage content={["Trade More.Pay Less.","Our Low Fees Supercharge Your Profits"]} showImage={false} textSize="5em"/>
+    <Profit content={["CoinDCX","0.025","0.07"]} changeColor={false}/>
+    <Profit content={["density","0.02","0.04"]} changeColor={true} bgColor="green"/>
+    <Profit content={["Delta.Exchange","0.02","0.05"]} changeColor={false}/>
+    <Coverpage content={["Explore the Markets like it is your Playground.","Search for your favourite coins and stay ahead of the market"]} src="https://img.freepik.com/premium-photo/business-charts-with-digital-interface_670147-7630.jpg?size=626&ext=jpg&ga=GA1.1.1569570689.1700404536&semt=ais" showImage={true} textSize="4em" exploreMarkets={true} changecolor={false}/>
+    <Coverpage content={["Unlock New Frontiers","Are you a stock trader looking for new opportunities to make money ?We got you covered!"]}  showImage={false} textSize="5em" changecolor={false}/>
+    <Badge content={["Same","Strategies","Same","Indicators","Better","Leverage","24x7","Trading"]}/>
+    <img src="https://img.freepik.com/free-vector/abstract-financial-big-data-graph-visualization_1217-2826.jpg?w=1380&t=st=1700934286~exp=1700934886~hmac=5675baec71047a7d36d032294ad2500cd3d9a9aff82686144032faab11603f5f"/>
+    <Coverpage content={["Start Small.Earn Big","Deposit a minimum of 1000 and get a Deposit bonus + dedicated relationship manager"]}  showImage={false} textSize="5em" changecolor={true}/>
+    <Coverpage content={["Derivates made simple in 3 Easy Steps",""]}  showImage={false} textSize="4em" changecolor={false}/>
+    <Hybrid leftpic="https://th.bing.com/th/id/OIP.EUub8dRhBDE-kYTSoh93-gAAAA?pid=ImgDet&w=188&h=333&c=7&dpr=1.3" src="https://cdn-icons-png.flaticon.com/128/4122/4122726.png?ga=GA1.1.1569570689.1700404536&semt=ais" text={["Create an Account","Register & Complete your Verification in less than 2 minutes","TRADE NOW"]}/>
+    <Hybrid leftpic="https://th.bing.com/th/id/OIP.FAbLOdb6fip2Ag7M5VOlDQHaQC?pid=ImgDet&w=162&h=350&c=7&dpr=1.3" src="https://cdn-icons-png.flaticon.com/128/12621/12621043.png?ga=GA1.1.1569570689.1700404536&semt=ais" text={["Deposit Funds","Add funds quickly using a variety of payment methods","TRADE NOW"]}/>
+    <Hybrid leftpic="https://th.bing.com/th/id/OIP.v1uhxBOTjSJnsQzoZx3stQHaQB?pid=ImgDet&w=162&h=350&c=7&dpr=1.3" src="https://cdn-icons-png.flaticon.com/128/9597/9597455.png?ga=GA1.1.1569570689.1700404536&semt=ais" text={["Become a Trader","Choose Your Trading Pair & Trade Seamlessly"]}/>
+    <Logo/>
+    <Last content={["Don't take our word for it.","Hear it from our expert community of traders who have made insane amounts in a short amount of time"]}  showImage={false} textSize="4em" changecolor={true}/><br/>
+    <img src="https://cdn-icons-png.flaticon.com/128/9346/9346801.png?ga=GA1.1.1569570689.1700404536&semt=ais" alt="announcement"/>
+    <Lastblack content={["Earn Money.The Easy Way.","No complexity of trading fee, generate volume and win"]}  showImage={false} textSize="4em" changecolor={false}/>
+    <DIV>START EARNING NOW</DIV><br/><div style={{height:"80px"}}></div>
+    <div style={{backgroundImage:`url("https://img.freepik.com/free-photo/golden-lighting-effect-background_1340-8920.jpg?size=626&ext=jpg&ga=GA1.1.1569570689.1700404536&semt=ais")`, backgroundRepeat:"no-repeat", backgroundSize:"cover"}}><br/>
+    <Coverpage content={["Trade Together.Thrive Together.","Join the fun filled community on our platform"]}  showImage={false} textSize="3em" changecolor={false}/>
+    <Badge content={["10,000+","Traders","100 Mn","Daily Volume Traded","Daily","Trade Analysis","Live","signals"]}/>
+    <DIV>JOIN COMMUNITY</DIV><br/>
+    <div style={{height:"80px"}}></div></div>
+    <div style={{fontSize:"5em",paddingTop:"100px",marginBottom:"100px"}}>Meet the Visionaries behind Density.</div>
+    <img src="/founders.png" style={{marginBottom:"100px"}}/>
+    <End/>
+  </MAIN>
 }
 
-const badgeStyle = {
-  color: "#fff",
-  backgroundColor: "#088413",
-  border: "1px solid #088413",
-  fontSize: 11,
-  fontWeight: "bold",
-  letterSpacing: 1,
-  borderRadius: 4,
-  padding: "4px 6px",
-  display: "inline-block",
-  position: "relative",
-  top: -2,
-  marginLeft: 10,
-  lineHeight: 1,
-}
-
-const links = [
-  {
-    text: "Tutorial",
-    url: "https://www.gatsbyjs.com/docs/tutorial/getting-started/",
-    description:
-      "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
-    color: "#E95800",
-  },
-  {
-    text: "How to Guides",
-    url: "https://www.gatsbyjs.com/docs/how-to/",
-    description:
-      "Practical step-by-step guides to help you achieve a specific goal. Most useful when you're trying to get something done.",
-    color: "#1099A8",
-  },
-  {
-    text: "Reference Guides",
-    url: "https://www.gatsbyjs.com/docs/reference/",
-    description:
-      "Nitty-gritty technical descriptions of how Gatsby works. Most useful when you need detailed information about Gatsby's APIs.",
-    color: "#BC027F",
-  },
-  {
-    text: "Conceptual Guides",
-    url: "https://www.gatsbyjs.com/docs/conceptual/",
-    description:
-      "Big-picture explanations of higher-level Gatsby concepts. Most useful for building understanding of a particular topic.",
-    color: "#0D96F2",
-  },
-  {
-    text: "Plugin Library",
-    url: "https://www.gatsbyjs.com/plugins",
-    description:
-      "Add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
-    color: "#8EB814",
-  },
-  {
-    text: "Build and Host",
-    url: "https://www.gatsbyjs.com/cloud",
-    badge: true,
-    description:
-      "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
-    color: "#663399",
-  },
-]
-
-const IndexPage = () => {
-  return (
-    <main style={pageStyles}>
-      <h1 style={headingStyles}>
-        Congratulations
-        <br />
-        <span style={headingAccentStyles}>— you just made a Gatsby site! 🎉🎉🎉</span>
-      </h1>
-      <p style={paragraphStyles}>
-        Edit <code style={codeStyles}>src/pages/index.js</code> to see this page
-        update in real-time. 😎
-      </p>
-      <ul style={listStyles}>
-        <li style={docLinkStyle}>
-          <a
-            style={linkStyle}
-            href={`${docLink.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
-          >
-            {docLink.text}
-          </a>
-        </li>
-        {links.map(link => (
-          <li key={link.url} style={{ ...listItemStyles, color: link.color }}>
-            <span>
-              <a
-                style={linkStyle}
-                href={`${link.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
-              >
-                {link.text}
-              </a>
-              {link.badge && (
-                <span style={badgeStyle} aria-label="New Badge">
-                  NEW!
-                </span>
-              )}
-              <p style={descriptionStyle}>{link.description}</p>
-            </span>
-          </li>
-        ))}
-      </ul>
-      <img
-        alt="Gatsby G Logo"
-        src="data:image/svg+xml,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2a10 10 0 110 20 10 10 0 010-20zm0 2c-3.73 0-6.86 2.55-7.75 6L14 19.75c3.45-.89 6-4.02 6-7.75h-5.25v1.5h3.45a6.37 6.37 0 01-3.89 4.44L6.06 9.69C7 7.31 9.3 5.63 12 5.63c2.13 0 4 1.04 5.18 2.65l1.23-1.06A7.959 7.959 0 0012 4zm-8 8a8 8 0 008 8c.04 0 .09 0-8-8z' fill='%23639'/%3E%3C/svg%3E"
-      />
-    </main>
-  )
-}
+export const Head =() => <title>Homepage</title>
 
 export default IndexPage
-
-export const Head = () => <title>Home Page</title>
